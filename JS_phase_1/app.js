@@ -1,80 +1,50 @@
-// Console & Basic
+// ## Data Types
 
-//solution:
-//1
-// console.log("Hello world");
+// 1. Create variables of type string, number, boolean, null, and undefined.
+// 2. Check the type of different variables using `typeof`.
+// 3. Store your mobile number in a variable and check its type.
+// 4. Create a variable with value `null` and check its type.
+// 5. Create a bigint number and print it.
 
-//2
-
-// let nm = "Durpat";
-// let age = 25;
-// let city = "benguluru";
-
-// console.log("Name:", nm, "age:", age, "city:", city);
-
-//3.
-// console.warn("please donot click on it!");
-
-//4.
-// console.error("This page is not exist");
-
-//5.
-// let num = [2, 4, 6, 8, 10];
-// console.table(num);
-
-//## Variables
-
-// 1. Create a variable called `studentName` and store your name in it.
-// 2. Create a variable `age` and print it.
-// 3. Create two variables and swap their values.
-// 4. Create a constant variable for `PI` and print it.
-// 5. Declare a variable without assigning a value and print it.
-// 6. Create a variable `score` and increase it by 10.
-// 7. Create three variables for first name, last name, and full name.
+//solution:-
 
 //1.
 
-// let studentNAme;
-// studentNAme = "Durpat";
-// console.log(studentNAme);
+// let nm = "ram";
+// let num = 1;
+// let bool = true;
+// let firstname = null;
+
+// let age;
+
+// console.log(typeof nm);
+// console.log(typeof num);
+// console.log(typeof bool);
+// console.log(typeof age);
 
 //2.
-
-// let age = 20;
-// console.log("your age is ;", age);
+// console.log(typeof nm);
+// console.log(typeof num);
+// console.log(typeof bool);
+// console.log(typeof age);
 
 //3.
 
-// let a = 20;
-// let b = 10;
-
-// a = a + b; //30 -> a
-// b= a - b; //20 -> b
-// a = a - b;//10
-// console.log(a);
-// console.log(b);
+// let mynum = 90190670503
+// console.log(typeof(mynum))
 
 //4.
 
-// const PI = 3.14
+// let nm = null
+// console.log(typeof(nm)) //object
 
-// console.log(PI)
+// let bigN = 10000n;
 
-//5.
+// console.log(typeof bigN); // bigint
 
-// let age;
-// console.log(age); // undefined
+// console.log(bigN);
 
-//6.
 
-// let score = 0;
-
-// score += 10;
-// console.log(score);
-
-//7.
-
-// let firstname = "Ram";
-// let lastname = "Sita";
-// let fullname = firstname +" "+ lastname;
-// console.log(fullname)
+// OR 
+// let num = BigInt("12324354654");
+// console.log(num); // 12324354654n
