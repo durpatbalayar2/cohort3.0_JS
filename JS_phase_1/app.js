@@ -1,50 +1,29 @@
-// ## Data Types
+// ## Type Conversion & Coercion 
 
-// 1. Create variables of type string, number, boolean, null, and undefined.
-// 2. Check the type of different variables using `typeof`.
-// 3. Store your mobile number in a variable and check its type.
-// 4. Create a variable with value `null` and check its type.
-// 5. Create a bigint number and print it.
+// 1. Convert the string "50" into a number.
+let n1 = "50";
+let n2 = Number(n1);
+console.log(n2); // 50 
 
-//solution:-
+// 2. Convert the number 100 into a string.
+let num = 100;
+let str = String(num);
+console.log(str); // "100" 
 
-//1.
+// 3. Convert "true" into a boolean.
+let strBool = "true";
+let actualBool = (strBool === "true");
+console.log(actualBool); // true 
 
-// let nm = "ram";
-// let num = 1;
-// let bool = true;
-// let firstname = null;
+// 4. Check the output of:
+console.log("5" + 2);  // "52" (String concatenation)
+console.log("5" - 2);  // 3    (Numeric subtraction)
+console.log(true + 1); // 2    (True converts to 1) 
 
-// let age;
+// 5. Create a variable with value "123abc" and convert it into a number.
+let txt = "123abc";
+let nm = Number(txt);
+console.log(nm); // NaN (Because it contains text characters) 
 
-// console.log(typeof nm);
-// console.log(typeof num);
-// console.log(typeof bool);
-// console.log(typeof age);
-
-//2.
-// console.log(typeof nm);
-// console.log(typeof num);
-// console.log(typeof bool);
-// console.log(typeof age);
-
-//3.
-
-// let mynum = 90190670503
-// console.log(typeof(mynum))
-
-//4.
-
-// let nm = null
-// console.log(typeof(nm)) //object
-
-// let bigN = 10000n;
-
-// console.log(typeof bigN); // bigint
-
-// console.log(bigN);
-
-
-// OR 
-// let num = BigInt("12324354654");
-// console.log(num); // 12324354654n
+// 6. Use parseInt() on "500px".
+console.log(parseInt("500px")); // 500 (Extracts numbers from the start)
