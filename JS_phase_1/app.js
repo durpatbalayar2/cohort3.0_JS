@@ -11,13 +11,16 @@ if (age === null) {
   age = age.trim();
 
   if (isNaN(age)) {
-    console.log("Please enter the age number");
+    console.error("Please enter the age number");
   } else {
     age = Number(age);
-    if (age >= 18) {
+
+    if (age < 0 || age > 100) {
+      console.log("This is not valid age");
+    } else if (age >= 18) {
       console.log(`Your age is ${age} and eligible for vote`);
     } else {
-      console.log(`Your age is ${age} and not eligible for vote`);
+      console.log(` Age is ${age} and not eligible for vote`);
     }
   }
 }
