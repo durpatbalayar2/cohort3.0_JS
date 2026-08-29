@@ -1,49 +1,23 @@
-// 1. Print no. from 1 to 10
+// 7. Ask user’s age and check if eligible to vote
+// If age >= 18 → “Eligible”, else → “Not eligible”
 
-for(let i=1;i<=10;i++){
-    console.log(i)
-}
+let age = prompt("Enter your age:");
 
-//2. Print only even no from 1 to 20
-
-for (let i = 1; i <= 20; i++) {
-  if (i % 2 === 0) {
-    console.log(i);
-  }
-}
-
-
-//3. prrint no. from 10 to 1
-
-for(let i=10; i>=1;i--){
-    console.log(i)
-}
-
-//4. print the word "yes" 5times.
-
-for(let i=1;i<=5;i++){
-    console.log("yes")
-}
-
-
-//5. print wheather no. from 1 to 10 are even or odd
-
-for(let i=1;i<=10;i++){
-    if(i%2===0){
-        console.log(`${i} is even`)
-    }else{
-        console.log(`${i} is odd`)
-    }
-}
-
-//6. Ask user for a number and say if it is positive or negative
-
-let n = +prompt("Enter a number")
-
-if (n > 0) {
-    console.log(`${n} is positive`)
-} else if (n < 0) {
-    console.log(`${n} is negative`)
+if (age === null) {
+  console.warn("You cancelled");
+} else if (age.trim() === "") {
+  console.error("You have not entered the number");
 } else {
-    console.log("You entered zero")
+  age = age.trim();
+
+  if (isNaN(age)) {
+    console.log("Please enter the age number");
+  } else {
+    age = Number(age);
+    if (age >= 18) {
+      console.log(`Your age is ${age} and eligible for vote`);
+    } else {
+      console.log(`Your age is ${age} and not eligible for vote`);
+    }
+  }
 }
