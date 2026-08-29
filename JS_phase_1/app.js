@@ -1,56 +1,49 @@
-// ## Operators 
+// 1. Print no. from 1 to 10
 
-// 1. Add two numbers and print the result.
-let a = 10;
-let b = 20;
-console.log(a + b); // 30 
+for(let i=1;i<=10;i++){
+    console.log(i)
+}
 
-// 2. Find the remainder when 25 is divided by 4.
-let n1 = 25;
-let n2 = 4;
-console.log(n1 % n2); // 1 (Using the % Modulus operator) 
+//2. Print only even no from 1 to 20
 
-// 3. Find the square of a number using exponent operator.
-let base = 5;
-let square = base ** 2; // ** is the exponent operator
-console.log(square); // 25 
+for (let i = 1; i <= 20; i++) {
+  if (i % 2 === 0) {
+    console.log(i);
+  }
+}
 
-// 4. Increment a variable using ++.
-let c = 5;
-c++;
-console.log(c); // 6 
 
-// 5. Decrement a variable using --.
-let d = 5;
-d--;
-console.log(d); // 4 
+//3. prrint no. from 10 to 1
 
-// 6. Use += operator to increase a variable by 20.
-let e = 0;
-e += 20;
-console.log(e); // 20 
+for(let i=10; i>=1;i--){
+    console.log(i)
+}
 
-// 7. Compare two numbers using >, <, >=, <=.
-console.log(6 > 5);   // true
-console.log(4 < 6);   // true
-console.log(10 >= 10); // true
-console.log(5 <= 2);   // false 
+//4. print the word "yes" 5times.
 
-// 8. Check if two values are strictly equal using ===.
-let x = 5;
-let y = 5;
-console.log(x === y); // true 
+for(let i=1;i<=5;i++){
+    console.log("yes")
+}
 
-// 9. Compare "10" and 10 using both == and ===.
-let strNum = "10";
-let realNum = 10;
-console.log(strNum == realNum);  // true (Loose: converts type automatically)
-console.log(strNum === realNum); // false (Strict: matches value AND type) 
 
-// 10. Create two boolean variables and test &&, ||, and !.
-let isSunny = true;
-let isWarm = false; 
+//5. print wheather no. from 1 to 10 are even or odd
 
-console.log(isSunny && isWarm); // false (Both must be true)
-console.log(isSunny || isWarm); // true  (At least one must be true)
-console.log(!isSunny);          // false (Inverts true to false)
+for(let i=1;i<=10;i++){
+    if(i%2===0){
+        console.log(`${i} is even`)
+    }else{
+        console.log(`${i} is odd`)
+    }
+}
+
+//6. Ask user for a number and say if it is positive or negative
+
+let n = +prompt("Enter a number")
+
+if (n > 0) {
+    console.log(`${n} is positive`)
+} else if (n < 0) {
+    console.log(`${n} is negative`)
+} else {
+    console.log("You entered zero")
+}
