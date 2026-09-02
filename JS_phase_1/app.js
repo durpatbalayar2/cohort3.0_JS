@@ -1,128 +1,93 @@
-// Level 2 – Slightly Tougher but Logical
-// 11. Allow only 3 attempts to enter correct password
-// If user gets it right early, stop. If not → “Account locked”
+//replace "Banana" with "Kiwi" in the array
 
-// let mypass = "haihai";
-// let attempts = 0;
+let arr = ["Apple","Banana"]
 
-// let userpass = prompt("Enter your password: ");
-// attempts++;
+arr.splice(1,1,"Kiwi")
 
-// while (mypass !== userpass) {
-//   if (attempts === 3) {
-//     console.warn(`Your account have locked`);
-//     break;
-//   }
-//   userpass = prompt("Enter your password: ");
-//   attempts++;
-// }
+console.log(arr);
 
-// if (userpass === mypass) {
-//   console.log("Welcome");
-// }
+//Insert "Red" & "Blue"  at index 1 in the given array
 
-// 12. Ask user for words until they type “stop”. Count how many times they typed “yes”
-// Loop until "stop" is typed. Count "yes".
+let colors = ["Green", "Yellow"]
 
-// let count = 0;
-// let word = prompt("Enter the word:");
+colors.splice(1,0,"Red","Blue")
 
-// while (word !== "stop") {
-//   if (word === "yes") {
-//     count++;
-//   }
-//   word = prompt("Enter the word:");
-// }
+//Extract only the middle 3 elements from this array
 
-// console.log(`You have typed ${count} "yes" word`);
+let items = [1, 2, 3, 4, 5, 6];
+let newArr = items.slice(2, 5);
 
-// 13. Print numbers divisible by 7 from 1 to 50
-// Use modulo % and loop.
+//Sort this array alphabetically and  then reverse it.
 
-// for (let i = 1; i <= 50; i++) {
-//   if (i % 7 === 0) {
-//     console.log(i);
-//   }
-// }
+let names = ["Zara","Arjun","Mira","Bhavya"]
+names.sort().reverse()
 
-// 14. Sum of all odd numbers from 1 to 30
-// Add only odd numbers. Print final sum.
-// let sum = 0;
-// for (let i = 1; i <= 30; i++) {
-//   if (i % 2 === 1) {
-//     sum += i;
+//Use .map()  to square this number
 
-//     console.log(i);
-//   }
-// }
+let num = [1, 2, 3, 4, 5];
 
-// console.log(`Sum of odd number is ${sum}`);
-
-// 15. Keep asking number until user enters an even number
-// Use while loop. Stop only if input is even.
-
-// let num = +prompt("Enter a number:");
-
-// while (num % 2 !== 0) {
-//   num = +prompt("Enter a number:");
-// }
-
-// console.log(`${num} is even`);
-
-// 16. Print numbers between two user inputs
-// Input start and end using prompt() → print all between.
-
-// let start = +prompt("Enter a  start number");
-// let end = +prompt("Enter a end number");
-
-// //edge case
-
-// if (start > end)
-//   console.error("Starting number should not be greater than ending");
-
-// for (let i = start; i <= end; i++) {
-//   console.log(i);
-// }
-
-// 17. Print only first 3 odd numbers from 1 to 20
-// Use loop. Stop with break after 3 odd prints.
-
-// let count = 0;
-// for (let i = 1; i <= 20; i++) {
-//   if (count === 3) break;
-//   if (i % 2 !== 0) {
-//     console.log(i);
-//     count++;
-//   }
-// }
-
-// 18. Ask user 5 numbers. Count how many are positive
-// Use loop + condition + counter.
-
-// let count = 0;
-// for (let i = 1; i <= 5; i++) {
-//   let num = +prompt("Enter a number");
-
-//   if (num >= 0) count++;
-// }
-// console.log(`Total positive number are :${count}`);
-
-// 19. ATM Simulator – Allow 3 withdrawals
-// Start with ₹1000 balance. Ask withdrawal amount 3 times.
-// If enough balance → deduct
-// Else → print “Insufficient balance”
-
-let balanceAmt = 1000;
-
-for (let i = 1; i <= 3; i++) {
-  let withdrawal = +prompt("Enter amount to be withdrawn:");
-
-  if (balanceAmt >= withdrawal) {
-    balanceAmt = balanceAmt - withdrawal;
-    console.log(`₹${withdrawal} withdrawn successfully`);
-  } else {
-    console.log("Insufficient balance");
-  }
+function square() {
+  return num.map(function (val) {
+    return val * val;
+  });
 }
 
-console.log(`Remaining balance amount is: ₹${balanceAmt}`);
+console.log(square());
+
+//Use filter() method to keep number greater than 10
+
+let arr = [5,12,8,20,3]
+
+ let newArr =arr.filter(function(val){
+
+    return val >10
+
+})
+
+//Use reduce() to find the sum of this array
+
+let arr =[10,20,30,40,50]
+
+let newArr =arr.reduce((acc,val)=>{
+    return acc + val
+},0)
+
+//Use find() method  to get the first number less than 10:
+
+let arr = [12, 15, 3, 8, 20];
+let newElem = arr.find(function (val) {
+  return val < 10;
+});
+
+//Use some() to check  if any student  has scored marks below 35
+
+let marks = [45, 60, 28, 90];
+
+let ans = marks.some(function (val) {
+  return val < 35;
+});
+
+ //Use every() to check if all number are even
+
+let arr = [2, 4, 6, 8, 20];
+
+let ans =arr.every((a) => {
+  return a % 2 === 0;
+});
+
+
+//Destructure this array to get firstn\Name and lastName
+
+let arr = ["Durpat","Balayar"]
+
+let [firstName,lastName] = arr;
+console.log(firstName)
+console.log(lastName)
+
+
+//Merge two array using spread operator
+
+let a =[1,2]
+let b=[3,4]
+
+let c = [...a,...b]
